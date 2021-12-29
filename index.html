@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c9c28df2a2.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="topbar">
+        <div class="icon">
+            <h1>CoolDude69</h1>
+        </div>
+    </div>
+    <br><br>
+    <div class="search">
+     <i class="fas fa-search" id = "ic"></i>
+    <input type="search" name="" id="srch">
+ </div>
+ <br><br>
+
+<div class="display">
+    <div class="current">
+        <div class="img">
+            <!-- <img src="https://www.freeiconspng.com/thumbs/sun-icon/sun-icon-31.png" alt="!"> -->
+            <i class="fas fa-sun"></i>
+        </div>
+        <div class="info">
+            <br>
+            <h1 id="city">City</h1>
+            <h1 id="temp">20&deg; C</h1>
+        </div>
+    </div>
+    <div class="details">
+        <ul>
+            <li>Feels Like <span id = "feelslike"></span>&deg; C</li>
+            <li>Air Quality <span id = "airquality"></span></li>
+            <li>Visibility Range <span id = "visibility"></span>Kilometer</li>
+            <li>Maximum Temperature <span id = "maxtemp"></span>&deg; C</li>
+            <li>Minimum Temperature <span id =  "mintemp"></span>&deg; C</li>
+            <li>Wind Speed <span id =  "wind"></span>Kmph</li>
+            <li>Humidity <span id =  "humidity"></span>%</li>
+            <li>Sunrise <span id =  "sunrise"></span></li>
+            <li>Sunset <span id =  "sunset"></span></li>
+        </ul>
+    </div>
+</div>
+
+ <script src="src/index.js"></script>    
+</body>
+</html>
