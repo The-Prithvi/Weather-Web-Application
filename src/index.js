@@ -21,7 +21,7 @@ srch.addEventListener('keyup',(event) => {
           getdata(city);
         }
         else{
-          alert("Abey Gaon ka Naam toh daal")
+          alert("Abey Gaon Ka Naam Toh Daal")
         }
         
     }
@@ -38,7 +38,7 @@ getdata = (city) => {
         xhr.send();
         xhr.onload = () => {
           if (xhr.status === 404) {
-            alert("Konsi Jagah Hai Ye!");
+            alert("Abey Konsi Jagah Hai Ye!");
           }  
           else {
             var data = JSON.parse(xhr.response);
@@ -49,13 +49,50 @@ getdata = (city) => {
             mintemp.innerHTML = (data.main.temp_min - 273.15).toFixed(2);
             feelslike.innerHTML = (data.main.feels_like - 273.15).toFixed(2);
             airquality.innerHTML = (data.weather[0].main);
-            visibility.innerHTML = data.visibility / 1000 ;
-            wind.innerHTML = (data.wind.speed * 1.609).toFixed(2);
-            humidity.innerHTML = data.main.humidity
+            visibility.innerHTML = data.visibility / 1000 + "Kilometer" ;
+            wind.innerHTML = (data.wind.speed * 1.609).toFixed(2) + "Km/h";
+            humidity.innerHTML = data.main.humidity + "%" 
             let sunriseTime = `${new Date(data.sys.sunrise).getHours()} : ${new Date(data.sys.sunrise).getMinutes()}`;
             let sunsetTime = `${new Date(data.sys.sunset).getHours()} : ${new Date(data.sys.sunset).getMinutes()}`;
-            sunrise.innerHTML = sunriseTime + "AM";
-            sunset.innerHTML = sunsetTime + "PM";
+            sunrise.innerHTML = sunriseTime + " AM";
+            sunset.innerHTML = sunsetTime + " PM";
+            if(data.weather[0].main == "Clouds"){
+              document.getElementById('cloud').style.display = 'block';
+            }
+            else{
+              document.getElementById('cloud').style.display = 'none';
+            }
+            if(data.weather[0].main == "Clear"){
+              document.getElementById('sun').style.display = 'block';
+            }
+            else{
+              document.getElementById('sun').style.display = 'none';
+            }
+            if(data.weather[0].main == "Mist"){
+              document.getElementById('mist').style.display = 'block';
+            }
+            else{
+              document.getElementById('mist').style.display = 'none';
+            }
+            if(data.weather[0].main == "Smoke"){
+              // document.getElementById('mist').style.display = 'block';
+            }
+            else{
+              // document.getElementById('mist').style.display = 'none';
+            }
+            if(data.weather[0].main == "Snow"){
+              document.getElementById('snow').style.display = 'block';
+            }
+            else{
+              document.getElementById('snow').style.display = 'none';
+            }
+            if(data.weather[0].main == "Rain"){
+              document.getElementById('rain').style.display = 'block';
+            }
+            else{
+              document.getElementById('rain').style.display = 'none';
+            }
+            
             // sunrise.innerHTML = sunriseTime;
           }   
           const res = JSON.parse(xhr.response);
