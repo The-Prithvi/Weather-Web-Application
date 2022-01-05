@@ -21,7 +21,7 @@ srch.addEventListener('keyup',(event) => {
           getdata(city);
         }
         else{
-          alert("Abey Gaon Ka Naam Toh Daal")
+          alert("Enter Place Name!")
         }
         
     }
@@ -38,7 +38,7 @@ getdata = (city) => {
         xhr.send();
         xhr.onload = () => {
           if (xhr.status === 404) {
-            alert("Abey Konsi Jagah Hai Ye!");
+            alert("Place Not Found!");
           }  
           else {
             var data = JSON.parse(xhr.response);
@@ -61,21 +61,25 @@ getdata = (city) => {
             }
             else{
               document.getElementById('cloud').style.display = 'none';
+              event.preventDefault();
             }
             if(data.weather[0].main == "Clear"){
               document.getElementById('sun').style.display = 'block';
             }
             else{
               document.getElementById('sun').style.display = 'none';
+              event.preventDefault();
             }
             if(data.weather[0].main == "Mist"){
               document.getElementById('mist').style.display = 'block';
             }
             else{
               document.getElementById('mist').style.display = 'none';
+              event.preventDefault();
             }
             if(data.weather[0].main == "Smoke"){
               // document.getElementById('mist').style.display = 'block';
+              event.preventDefault();
             }
             else{
               // document.getElementById('mist').style.display = 'none';
@@ -85,12 +89,28 @@ getdata = (city) => {
             }
             else{
               document.getElementById('snow').style.display = 'none';
+              event.preventDefault();
             }
             if(data.weather[0].main == "Rain"){
               document.getElementById('rain').style.display = 'block';
             }
             else{
               document.getElementById('rain').style.display = 'none';
+              event.preventDefault();
+            }
+            if(data.weather[0].main == "Drizzle"){
+              document.getElementById('drizzle').style.display = 'block';
+            }
+            else{
+              document.getElementById('drizzle').style.display = 'none';
+              event.preventDefault();
+            }
+            if(data.weather[0].main == "Fog"){
+              document.getElementById('fog').style.display = 'block';
+            }
+            else{
+              document.getElementById('fog').style.display = 'none';
+              event.preventDefault();
             }
             
             // sunrise.innerHTML = sunriseTime;
