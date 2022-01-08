@@ -49,8 +49,8 @@ getdata = (city) => {
             mintemp.innerHTML = (data.main.temp_min - 273.15).toFixed(2);
             feelslike.innerHTML = (data.main.feels_like - 273.15).toFixed(2);
             airquality.innerHTML = (data.weather[0].main);
-            visibility.innerHTML = data.visibility / 1000 + "Kilometer" ;
-            wind.innerHTML = (data.wind.speed * 1.609).toFixed(2) + "Km/h";
+            visibility.innerHTML = (data.visibility / 10000).toFixed(2) + " Kilometer" ;
+            wind.innerHTML = (data.wind.speed * 1.609).toFixed(2) + " Km/h";
             humidity.innerHTML = data.main.humidity + "%" 
             let sunriseTime = `${new Date(data.sys.sunrise).getHours()} : ${new Date(data.sys.sunrise).getMinutes()}`;
             let sunsetTime = `${new Date(data.sys.sunset).getHours()} : ${new Date(data.sys.sunset).getMinutes()}`;
