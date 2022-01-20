@@ -51,11 +51,11 @@ getdata = (city) => {
             airquality.innerHTML = (data.weather[0].main);
             visibility.innerHTML = (data.visibility / 10000).toFixed(2) + " Kilometer" ;
             wind.innerHTML = (data.wind.speed * 1.609).toFixed(2) + " Km/h";
-            humidity.innerHTML = data.main.humidity + "%" 
-            let sunriseTime = `${new Date(data.sys.sunrise).getHours()} : ${new Date(data.sys.sunrise).getMinutes()}`;
-            let sunsetTime = `${new Date(data.sys.sunset).getHours()} : ${new Date(data.sys.sunset).getMinutes()}`;
-            sunrise.innerHTML = sunriseTime + " AM";
-            sunset.innerHTML = sunsetTime + " PM";
+            humidity.innerHTML = data.main.humidity + "%"
+            // let sunriseTime = `${new Date(data.sys.sunrise).getHours()} : ${new Date(data.sys.sunrise).getMinutes()}`;
+            // let sunsetTime = `${new Date(data.sys.sunset).getHours()} : ${new Date(data.sys.sunset).getMinutes()}`;
+            // sunrise.innerHTML = sunriseTime + " AM";
+            // sunset.innerHTML = sunsetTime + " PM";
             if(data.weather[0].main == "Clouds"){
               document.getElementById('cloud').style.display = 'block';
             }
@@ -77,13 +77,13 @@ getdata = (city) => {
               document.getElementById('mist').style.display = 'none';
               event.preventDefault();
             }
-            if(data.weather[0].main == "Smoke"){
-              // document.getElementById('mist').style.display = 'block';
-              event.preventDefault();
-            }
-            else{
-              // document.getElementById('mist').style.display = 'none';
-            }
+            // if(data.weather[0].main == "Smoke"){
+            //   // document.getElementById('mist').style.display = 'block';
+            //   event.preventDefault();
+            // }
+            // else{
+            //   // document.getElementById('mist').style.display = 'none';
+            // }
             if(data.weather[0].main == "Snow"){
               document.getElementById('snow').style.display = 'block';
             }
