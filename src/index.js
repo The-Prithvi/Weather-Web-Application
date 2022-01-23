@@ -12,7 +12,7 @@ const sunset = document.getElementById('sunset');
 const date = new Date();
 
 
-const apiKey = '9124a3e9d976ff3d3135422bbaeca018';
+// const apiKey = '9124a3e9d976ff3d3135422bbaeca018';
 srch.addEventListener('keyup',(event) => {
     if(event.keyCode === 13){
         event.preventDefault(); //it doesnt let the page refresh
@@ -31,8 +31,6 @@ getdata = (city) => {
       xhr.open(
           "GET",
           `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=cad7ec124945dcfff04e457e76760d90`);
-        // in place of appid enter your open weather API Key
-        // You can create it for free
         // https://home.openweathermap.org/users/sign_up
     
         xhr.send();

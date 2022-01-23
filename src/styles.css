@@ -13,7 +13,6 @@ body{
     background-image: linear-gradient(to top right, rgba(255, 0, 0, 0.521),rgba(0, 255, 149, 0.432), rgba(255, 196, 0, 0.377)), url(./bg.jpg) ;
     background-size: 100%;
     background-repeat: no-repeat;
-    /* color: wheat;; */
 }
 .topbar{
     display: flex;
@@ -53,7 +52,7 @@ font-size: 20px;
     border: none;
     box-shadow: none;
     font-size: 160%;
-    padding-left: 3.2rem;
+    padding-left: 3.7rem;
     padding-right: 0.5rem;
     color: black;
     /* border: 2px solid rgb(255, 255, 255); */
@@ -74,8 +73,9 @@ font-size: 20px;
     height: 27rem;
     display: flex;
     justify-content: space-between;
-    background: rgba(0, 0, 0, 0.158);
+    background: rgba(255, 255, 255, 0.158);
     border-radius: 20px;
+    
 }
 .current{
     /* border: 10px solid rgb(55, 21, 100); */
@@ -89,6 +89,7 @@ font-size: 20px;
     width: 50%;
     height: 70%;
     margin-top: 4rem;
+    
 }
 .img{
     /* border: 2px solid rgb(255, 0, 140); */
@@ -138,6 +139,7 @@ font-size: 20px;
     width: auto;
     height: 30%;
     font-size: 25px;
+    
     
 }
 .details{
